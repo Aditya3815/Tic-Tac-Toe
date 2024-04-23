@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+
+    <ImageView
+        android:id="@+id/applogo"
+        android:layout_width="170dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="58dp"
+        android:padding="8dp"
+        android:src="@drawable/game"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textshowing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="48dp"
+        android:fontFamily="@font/baloo_bhai"
+        android:padding="8dp"
+        android:text="@string/textname"
+        android:textColor="#050505"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/wyf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/applogo" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/wyf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="106dp"
+        android:layout_marginEnd="106dp"
+        android:layout_marginBottom="23dp"
+        android:background="@drawable/ic_rectangle_shape"
+        android:backgroundTint="#EC1C25"
+        android:fontFamily="@font/poppins_semibold"
+        android:foreground="?android:selectableItemBackground"
+        android:minWidth="200dp"
+        android:minHeight="58dp"
+        android:paddingLeft="28dp"
+        android:paddingTop="8dp"
+        android:paddingRight="28dp"
+        android:paddingBottom="8dp"
+        android:text="@string/with_your_friend"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/wa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/wa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="211dp"
+        android:background="@drawable/ic_rectangle_shape"
+        android:elevation="10dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:minWidth="200dp"
+        android:minHeight="58dp"
+        android:paddingLeft="28dp"
+        android:paddingTop="8dp"
+        android:paddingRight="28dp"
+        android:paddingBottom="8dp"
+        android:text="@string/with_ai"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/wyf"
+        app:layout_constraintStart_toStartOf="@+id/wyf" />
+
+    <ImageView
+        android:id="@+id/setting"
+        android:layout_width="100dp"
+        android:layout_height="74dp"
+        android:layout_marginBottom="96dp"
+        android:src="@drawable/settings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/wa"
+        app:layout_constraintStart_toStartOf="@+id/wa" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

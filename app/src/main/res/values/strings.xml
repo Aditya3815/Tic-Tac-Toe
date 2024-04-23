@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Tic Tac Toe</string>
+    <string name="textname">Let\'s Play, Choose Mode</string>
+    <string name="with_your_friend">With Your Friend</string>
+    <string name="with_ai">With AI</string>
+    <string name="name">Enter Your Name</string>
+    <string name="please_enter_valid_name">Please Enter Proper Name</string>
+    <string name="team_x">Team \'X\'</string>
+    <string name="team_o">Team \'O\'</string>
+    <string name="you_are_team_o">You are Team \'O\'</string>
+    <string name="next">Next</string>
+    <string name="choose_a_side">Choose Your Team</string>
+    <string name="username">UserName</string>
+    <string name="your_side">You are Team </string>
+    <string name="play">Play\n</string>
+    <string name="you_are_all_set">You are all set</string>
+    <string name="game_won">Won the game!</string>
+    <string name="play_again">Play Again!</string>
+</resources>

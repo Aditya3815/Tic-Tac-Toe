@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/water_sky"
+    android:padding="18dp"
+    tools:context=".GameActivity1">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rlFriendOrAIContainer"
+        android:layout_width="375dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/gaBackBtn"
+        android:padding="1dp">
+
+        <TextView
+            android:id="@+id/tvFriendOrAISteps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/game_rec_shape"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:minWidth="60dp"
+            android:minHeight="40dp"
+            android:padding="10dp"
+            android:text="0"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivFriendOrAI"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="27dp"
+            android:src="@drawable/twotone_face_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvFriendOrAIName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:fontFamily="@font/roboto_mono_medium"
+            android:gravity="center"
+            android:padding="3dp"
+            android:textColor="#2196F3"
+            android:textSize="14.5dp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivFriendOrAI"
+            tools:text="Aditya Tiadilfdsk;fmsdk;" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rlUserContainer"
+        android:layout_width="375dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/gaBackBtn"
+        android:layout_marginTop="385dp"
+        android:background="@drawable/ic_active_indicator"
+        android:padding="1dp">
+
+        <TextView
+            android:id="@+id/tvUserSteps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/game_rec_shape"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:minWidth="60dp"
+            android:minHeight="40dp"
+            android:padding="10dp"
+            android:text="0"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivUser"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="269dp"
+            android:src="@drawable/twotone_face_24"
+            app:layout_constraintEnd_toStartOf="@+id/tvUserSteps"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/roboto_mono_medium"
+            android:text="Aditya Tiadiijfoflsfhewf"
+            android:textColor="#2196F3"
+            android:textSize="14.5sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivUser" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageButton
+        android:id="@+id/gaBackBtn"
+        android:layout_width="65dp"
+        android:layout_height="62dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="12dp"
+        android:background="?android:selectableItemBackground"
+        android:minHeight="60dp"
+        android:padding="13dp"
+        android:src="@drawable/baseline_arrow_back_ios_24"
+        app:tint="#FBB0B3" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvGameContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:backgroundTint="#FF4E55"
+        android:padding="8dp"
+        app:cardCornerRadius="9dp"
+        app:cardElevation="10dp">
+
+
+        <LinearLayout
+            android:id="@+id/llGameContainer"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@+id/gaBackBtn"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:weightSum="3.02">
+
+            <LinearLayout
+                android:id="@+id/llFirstRowContainer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="3.02">
+
+                <ImageView
+                    android:id="@+id/ivFirst"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="centerInside"
+                    tools:src="@drawable/outline_circle_24"
+                    android:tag="1" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.01"
+                    android:background="@color/black" />
+
+                <ImageView
+                    android:id="@+id/ivSecond"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="centerInside"
+                    tools:src="@drawable/outline_circle_24"
+                    android:tag="2" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.01"
+                    android:background="@color/black" />
+
+                <ImageView
+                    android:id="@+id/ivThird"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerInside"
+                    android:layout_weight="1"
+                    android:tag="3" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.01"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/llSecondRowContainer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/ivFourth"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="centerInside"
+                    android:tag="4" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.01"
+                    android:background="@color/black" />
+
+                <ImageView
+                    android:id="@+id/ivFive"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="centerInside"
+                    android:tag="5" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.01"
+                    android:background="@color/black" />
+
+                <ImageView
+                    android:id="@+id/ivSixth"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="centerInside"
+                    android:tag="6" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.01"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/llThirdRowContainer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/ivSeventh"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="centerInside"
+                    android:tag="7" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.01"
+                    android:background="@color/black" />
+
+                <ImageView
+                    android:id="@+id/ivEighth"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="centerInside"
+                    android:tag="8" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.01"
+                    android:background="@color/black" />
+
+                <ImageView
+                    android:id="@+id/ivNineth"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="centerInside"
+                    android:tag="9" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvGameResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="58sp"
+        android:layout_below="@+id/rlUserContainer"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:textSize="21sp"
+        android:fontFamily="@font/baloo_bhai"
+        tools:hint="@string/game_won"/>
+
+
+</RelativeLayout>

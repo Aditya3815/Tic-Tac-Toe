@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ChooseYourSideActivity">
+
+
+    <ImageView
+        android:id="@+id/applogo"
+        android:layout_width="170dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="40dp"
+        android:padding="8dp"
+        android:src="@drawable/game"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ivCysBackBtn"
+        android:layout_width="65dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="?android:selectableItemBackground"
+        android:minHeight="60dp"
+        android:padding="18dp"
+        android:src="@drawable/baseline_arrow_back_ios_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/light_red" />
+
+
+    <LinearLayout
+        android:id="@+id/llSidesContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/applogo">
+
+
+        <ImageView
+            android:id="@+id/ivcircle"
+            android:layout_width="172dp"
+            android:layout_height="147dp"
+            android:layout_marginLeft="7dp"
+            android:layout_weight="1"
+            android:src="@drawable/circle" />
+
+
+        <ImageView
+            android:id="@+id/ivcross"
+            android:layout_width="172dp"
+            android:layout_height="147dp"
+            android:layout_marginLeft="7dp"
+            android:layout_weight="1"
+            android:src="@drawable/close" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/rgSidesContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llSidesContainer">
+
+        <RadioButton
+            android:id="@+id/rbcircle"
+            android:layout_width="178dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:text="@string/team_o"
+            android:textColor="#FF5722"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="30dp"
+            tools:layout_editor_absoluteY="422dp" />
+
+
+        <RadioButton
+            android:id="@+id/rbcross"
+            android:layout_width="179dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:layoutDirection="rtl"
+            android:text="@string/team_x"
+            android:textColor="#FF5722"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="30dp"
+            tools:layout_editor_absoluteY="422dp" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/chooseTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/light_red"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        tools:hint="You are Team 'O'"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/rgSidesContainer"
+        app:layout_constraintTop_toBottomOf="@+id/rgSidesContainer" />
+
+
+    <TextView
+        android:id="@+id/greetUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="@+id/applogo"
+        app:layout_constraintStart_toStartOf="@+id/applogo"
+        app:layout_constraintTop_toBottomOf="@+id/applogo" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/CysNxtBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_rectangle_shape"
+        android:backgroundTint="#EC1C25"
+        android:fontFamily="@font/poppins_semibold"
+        android:foreground="?android:selectableItemBackground"
+        android:minWidth="200dp"
+        android:minHeight="58dp"
+        android:paddingLeft="28dp"
+        android:paddingTop="8dp"
+        android:paddingRight="28dp"
+        android:paddingBottom="8dp"
+        android:text="@string/next"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/chooseTextView"
+        app:layout_constraintStart_toStartOf="@+id/chooseTextView"
+        app:layout_constraintTop_toBottomOf="@+id/chooseTextView" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
